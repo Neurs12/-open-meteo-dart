@@ -4,6 +4,11 @@ A simple, fast, asynchronous Dart/Flutter package for accessing the Open-Meteo A
 All features from the [Open-Meteo API](https://open-meteo.com/en/features) have been implemented (some are limited).
 Be sure to read Open Meteo's [Terms of Use](https://open-meteo.com/en/terms/) before using this package in your project.
 
+- [Top Contributors](#top-contributors)
+- [Usage & Docs](#usage--docs)
+- [Known issues](#known-issues)
+- [1.1.0 Migration Guide](#110-migration-guide)
+
 ## Top Contributors
  <table>
   <tr>
@@ -16,6 +21,11 @@ Be sure to read Open Meteo's [Terms of Use](https://open-meteo.com/en/terms/) be
     </td>
   </tr>
 </table>
+
+## Known issues
+Addressed in [#16](https://github.com/neursh/open-meteo-dart/issues/16), the `Int64` type is not supported on the web platform due to Dart and Javascript differencies, and it won't be fixed for a long time.
+
+We'll try to find a workaround for this problem. But for now, the only way for web platform to continue to use the package is by using `requestJson()`.
 
 ## Usage & Docs
 Each of the nine features available in Open-Meteo is represented by its class: `WeatherApi`, `HistoricalApi`, `EnsembleApi`, `ClimateApi`, `MarineApi`, `AirQualityApi`, `GeocodingApi`, `ElevationApi` and `FloodApi`.
